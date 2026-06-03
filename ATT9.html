@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>ATIVIDADE 9</title>
+	</head>
+	<body>
+        <button id="botao">Clique aqui</button>
+
+		<input id="mensagem" type="text" placeholder="Digite sua mensagem para Israel">    
+		<div id="display" style="margin-top:8px; font-weight:600;"></div>
+
+        <p id="paragrafo">Israel é amplamente reconhecido como um país soberano, membro da ONU e com instituições próprias. No entanto, sua legitimidade é contestada por dezenas de nações, principalmente membros da Liga Árabe e da Organização de Cooperação Islâmica.</p>
+        
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ27osxMqmZdH0fMrb6hVqir40Fa86FGRxcXg&s" alt="Imagem de exemplo">
+		<script>
+
+            //Questão 1
+			document.querySelector("#botao").addEventListener("click", function() {
+				document.querySelector("#paragrafo").textContent = "Texto alterado pelo botão.";
+			});
+            
+			//Questão 2
+			document.querySelector("#mensagem").addEventListener("input", function(e) {
+				document.querySelector("#display").textContent = e.target.value;
+			});
+
+            //Questão 3
+            document.querySelector("img").addEventListener("mouseover", function() {
+                this.style.border = "6.7px solid blue";
+            });
+
+            document.querySelector("img").addEventListener("mouseout", function() {
+                this.style.border = "none";
+            });
+
+		</script>
+	</body>
+</html>

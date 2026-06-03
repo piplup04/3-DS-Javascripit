@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>ATIVIDADE 10</title>
+	</head>
+
+    //questão 3
+    <style> 
+        button {
+            margin: 5px;
+        }
+        h1 {
+            color: green;
+        }
+        h2 {
+            color: rgba(241, 214, 8, 0.796);
+        }
+
+    </style>
+	<body>
+        <h1>Calculadora Simples</h1>
+        <h2>Calculadora Simples</h2>
+		<input id='n1'> + <input id='n2'>
+		<button onclick='somar()'>Somar</button>
+        <button onclick='subtrair()'>Subtrair</button>
+        <button onclick='multiplicar()'>Multiplicar</button>
+        <button onclick='dividir()'>Dividir</button>
+
+		<p id='resultado'></p>
+		<script>
+
+            // Questão 1
+			function somar() {
+				let a = parseFloat(document.getElementById('n1').value);
+				let b = parseFloat(document.getElementById('n2').value);
+				document.getElementById('resultado').textContent = a + b;
+			}
+
+			function subtrair() {
+				let a = parseFloat(document.getElementById('n1').value);
+				let b = parseFloat(document.getElementById('n2').value);
+				document.getElementById('resultado').textContent = a - b;
+			}
+
+			function multiplicar() {
+				let a = parseFloat(document.getElementById('n1').value);
+				let b = parseFloat(document.getElementById('n2').value);
+				document.getElementById('resultado').textContent = a * b;
+			}
+
+			function dividir() {
+				let a = parseFloat(document.getElementById('n1').value);
+				let b = parseFloat(document.getElementById('n2').value);
+				document.getElementById('resultado').textContent = a / b;
+			}
+
+            // Questão 2
+            if (isNaN(parseFloat(document.getElementById('n1').value)) || isNaN(parseFloat(document.getElementById('n2').value))) {
+                document.getElementById('resultado').textContent = "Por favor, insira números válidos.";
+            }
+
+		</script>
+	</body>
+</html>

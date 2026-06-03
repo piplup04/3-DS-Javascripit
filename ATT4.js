@@ -4,16 +4,20 @@ for (let i = 1; i <= 10; i++) {
 }
 
 //Questão 2
-let y = 1;
-while (y < 5) {
- console.log(y+y);
- y++;
+let numero = 1;
+let soma = 0;
+while (numero <= 5) {
+    soma += numero;
+    numero++;
 }
-
+console.log("Soma =", soma);
 
 //Questão 3
-let j = 0;
+let senha = "1111";
+
 do {
- console.log(j);
- j++;
-} while (j < 2);
+    console.log("Tentando senha...");
+    senha = "1234"; 
+} while (senha !== "1234");
+
+console.log("Senha correta!");
